@@ -41,7 +41,7 @@ app.use(cookieParser())
 
 // socket configuration
 io.on('connection', (socket) => {
- console.log(socket)
+ console.log(socket.id)
  socket.emit('your id', socket.id)
  socket.on('inbox', body => {
   io.emit('outbox', body)
