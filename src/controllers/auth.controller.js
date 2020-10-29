@@ -37,7 +37,7 @@ const createToken = (id) => {
 
 const userCtrl = {}
 
-// create
+// create user
 userCtrl.signup = async (req, res) => {
  const { username, password } = req.body
 
@@ -55,6 +55,7 @@ userCtrl.signup = async (req, res) => {
  }
 }
 
+// log in user
 userCtrl.login = async (req, res) => {
  const { username, password } = req.body
  try {
